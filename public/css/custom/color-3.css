@@ -1,0 +1,170 @@
+
+
+
+/*________________________________ Set-Up For Primary Color ___________________________*/
+
+	   /*_________ Content Primary Color ________*/
+
+
+.p_color,#polyglotLanguageSwitcher ul.dropdown a:hover,.request_quote a:hover,.why_choose_us .choose_us_item:hover h4,.why_choose_us .choose_us_item:hover p,
+.latest_news .single_news .post ul li a:hover,.faqAndNews .faq_panel .panel-group .panel-heading.active-panel .icon:before,.req_callBack .callBack_text p a.p_color,
+.req_callBack .callBack_text h5 a,.company_excellance .hexagon .ficon:before,.main_menu .nav_right_area .cart_option .cart_list .cart_total a,.scroll-top span:before,
+.page_list li a:hover,.page_list li a.active,.business_enquiry p a.p_color,.about_us_main_content .our_mission .icon span:before,.request_quote_footer p,
+.our_team_main_content .team_member .text a,.search_style_two button:hover,.job_table .table tr td a:hover,.page_pagination li a,
+.blog_details_post .blog_mega_post .text .social_icon li a,.blog_details_post .comment_area .single_comment .comment a,.project_page #mixitup_list .text a i,
+.single_project_content .carousel-control:hover,.our_brochures a,.our_brochures a:hover span,.include_servises .our_mission .icon span:before,.shop_page .product_wrapper .text h5,
+.blog_page_wrapper .blog_post_single .text .share-content li a:hover,.cart_table .table-1 tbody tr td span,.shop_single_page .product_details .product-review-tab .item_review_content .text .up_down_nav a:hover,
+.shop_single_page .product_details .product-review-tab .item_review_content .text .reply_share_area a:hover,.shop_single_page .product_details .related_product>a,
+#success,.ourWP_team .team_member .img_holder .opacity .icon span a i,.faqAndNews .faq_panel .panel-group .panel-heading.active-panel .icon,.signup_newsletter form button:hover,
+.our_team_main_content .team_member .img_holder .opacity .icon span a {
+  color:#202730;
+}
+
+
+
+
+
+	   /*_______ Background for primary color ______*/
+
+.p_color_bg,#polyglotLanguageSwitcher ul.dropdown,
+.ui-state-focus, .ui-widget-content .ui-state-focus,.req_callBack .req_callBackForm form button:hover,.req_callBack .req_callBackForm form button:focus,.page_list li a:before,
+.our_partners_main_content .partner_info_wrapper .text span:before,.career_main_content .img_holder .text a:hover,.job_table .table tr th,
+.career_single_main_content .requirement_list li:before,.blog_page_wrapper .blog_post_single .text .share:hover,.page_pagination li a:hover,.page_pagination li a.active,
+.sidebar_search button,.sidebar_tags ul li a:hover,.blog_details_post .reply_area button:hover,.project_page .mixitUp_menu ul li:hover,.project_page .mixitUp_menu ul li.active,
+.project_page .mixitUp_menu ul li.is-checked,.single_project_content .carousel-control,.single_project_content .project_name a:hover,.project_solution .panel-heading.active-panel .icon,
+.our_brochures a:hover,.service_page_main_post .main_img_holder h4:before,.include_servises ul li:before,.service-tab .nav-pills li.active a,
+.service-tab .tab-content .tab-pane ul li:before,.single-sidebar.price-ranger .ui-slider-handle,.shop_single_page .product_details .product-review-tab .nav li.active a,
+.cart .shop_cart_table .icon_holder,.cart .cart_btn1,.cart .cart_btn2,.main_menu .navbar-default .nav>li .sub-menu,.main_menu .navbar-default .nav>li .sub-menu .sub-sub-menu,
+.req_callBackForm #error button,.req_callBackForm #success button {
+  background: #202730;
+}
+
+
+.request_quote,.award_banner .overlay,.ourWP_team .team_member .img_holder .opacity,.our_team_main_content .team_member .img_holder .opacity {
+	background: rgba(32,39,48,0.9);
+}
+#google-map-area .address_wrapper .map_address {
+  background: rgba(32,39,48,0.95);
+}
+.makesUs_special .overlay,.inner_banner .overlay {
+  background: rgba(32,39,48,0.8);
+}
+header .header_right ul li a {
+	background: #29313b;
+}
+footer .overlay {
+  background:rgba(32,39,48,0.9);
+}
+footer .footer_logo ul li a {
+  background: #202730;
+}
+
+
+	   	/*_______ Border for Primary color ______*/
+.about_us_main_content .our_mission .icon,.include_servises .our_mission .icon {
+	border:3px solid #202730;
+}
+.project_page .mixitUp_menu ul li:hover,.project_page .mixitUp_menu ul li.active {
+  border:2px solid #202730;;
+}
+.career_single_main_content .apply_form form .single_input textarea:focus,
+.career_single_main_content .apply_form form .single_input input:focus,.navbar-default .navbar-toggle {
+  border:1px solid #202730;
+}
+.company_excellance .hexagon {
+    border-top: solid 3px #202730;
+    border-bottom: solid 3px #202730;
+}
+.company_excellance .hexagon:before {
+  border-bottom: solid 3px #202730;
+  border-right: solid 3px #202730;
+}
+.company_excellance .hexagon:after {
+  border-top: solid 3px #202730;
+  border-left: solid 3px #202730;
+}
+.about_testimonial .testimonial .testimonial-carousel-content-box .text:after,.sidebar_testimonial .item .text:after,
+#testimonial-sidebar .text:after {
+	border-top-color:#202730;
+}
+footer {
+  border-top:8px solid #202730;
+}
+footer .quick_links ul.border_fix {
+  border-left:1px solid #202730;
+}
+footer .bottom_footer {
+  border-top:1px solid #202730;
+}
+/*_______________________________________ Set-Up For Secondary Color ________________________________*/
+
+
+
+
+	   /*_________ Content Secondary Color ________*/
+.s_color,.main_menu .nav_right_area .search_option .search:hover,.main_menu .nav_right_area .cart_option button:hover,.about_testimonial .testimonial .testimonial-carousel-content-box .author ul li,
+.about_testimonial .testimonial button:hover:before,.ourWP_team .team_member .text a,.latest_news .single_news .post ul li a,.blog_page_wrapper .blog_post_single .text ul li a,
+.award_banner .overlay h5 a,.req_callBack .callBack_text p a.s_color,.signup_newsletter .social_icon_newsletter li a,#google-map-area .owl-theme .owl-nav [class*=owl-]:hover:before,
+footer .quick_links ul li a:hover,footer .recent_news_footer .post p a,footer .bottom_footer p a,footer .bottom_footer ul li a:hover,.company_excellance .single_excellance:hover .ficon:before,
+.makesUs_special .overlay .special_item .ficon:before,.main_menu .nav_right_area .cart_option .cart_list .item_deatils ul li,.why_choose_us .choose_us_item .icon .ficon:before,
+footer .footer_contact p span:before,.page-breadcrumb ul li i,.fun_facts_single_item .icon .ficon:before,.business_enquiry p a.s_color,.about_us_main_content .img_holder .icon> a span:before,
+.about_us_main_content .our_mission .single_mission:hover .icon span:before,.client_feedback_main_content .feedback_single_client .author ul li,.blog_details_post .blog_mega_post .text>ul li a,
+.sidebar_search button,.recent_news_sidebar .post p a,.blog_details_post .comment_area .single_comment .comment a:hover,.blog_page_wrapper.blog_grid .blog_post_single .text>a,
+.project_page .mixitUp_menu ul li:hover,.project_page .mixitUp_menu ul li.active,.project_page .mixitUp_menu ul li.is-checked,.single_project_content .project_description table td,
+.project_solution .panel-heading.active-panel .icon,#related_project_slider .owl-nav [class*=owl-]:hover:before,#testimonial-sidebar .author ul li,.blogList_view .blogList_single_post .post ul li a,
+.include_servises .video_img .icon:hover a i,.shop_page .product_wrapper .text ul li,.best_sellers .best_selling_item .text ul li,.shop_single_page .product_details .product_top_section .item_description>ul>li>i,
+.shop_single_page .product_details .product-review-tab .item_review_content .text .sec_up ul li,.shop_single_page .product_details .product-review-tab .add_your_review ul li:hover,
+.about_testimonial .testimonial .owl-theme .owl-nav [class*=owl-]:hover:before,.main_menu .navbar-default .nav li>a:hover,.main_menu .navbar-default .nav li>a:focus,.request_quote_footer a:hover {
+  color:#13a0b2;
+}
+
+
+	   /*_______ Background for Secondary color ______*/
+.s_color_bg,.theme_title_center span,.theme_title:before,header .header_right ul li a:hover,.main_menu .navbar-default .nav>li:before,#main_slider h1:before,
+.why_choose_us .choose_us_item:hover,.latest_news .owl-dots .owl-dot.active span,.latest_news .owl-dots .owl-dot:hover span,footer .footer_logo ul li a:hover,
+.career_single_main_content .apply_form form .submit_wrapper button:hover,.blog_page_wrapper .blog_post_single .text .read_more:hover,.sidebar_search button:hover,
+.sidebar_categories ul li a:hover:before,.blog_details_post .blog_mega_post .text .social_icon li a:hover,.project_page .single_project .img_holder .overlay .icon span a:hover,
+.project_masonary .load_more:hover,.single_project_content .carousel-control:hover,.our_brochures a:hover span,#testimonial-sidebar .owl-dots .owl-dot.active span,
+.shop_page .product_wrapper:hover .text a,.blog_page_wrapper .blog_post_single .text .share-content li a:hover,.single-sidebar.price-ranger .ui-widget-header,.cart_table .payment_system a:hover,
+.shop_single_page .product_details .product_top_section .item_description>a:hover,.main_menu .navbar-default .nav>li .sub-menu>li a:before,
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus,.shop_single_page .product_details .product-review-tab .add_your_review form button:hover,
+.cart .cart_btn1:hover,.cart .cart_btn2:hover,.hephaistos.tparrows:hover,.hephaistos.tparrows:focus,.ourWP_team .team_member .img_holder .opacity .icon span a,
+.faqAndNews .faq_panel .panel-group .panel-heading.active-panel .icon,.our_team_main_content .team_member .img_holder .opacity .icon span a  {
+  background: #13a0b2;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #13a0b2;
+}
+
+
+footer .recent_news_footer .img_holder .opacity,.recent_news_sidebar .img_holder .opacity {
+   background: rgba(19,160,178,0.8);
+}
+	   	/*_______ Border for Secondary color ______*/
+
+.company_excellance .single_excellance:hover .hexagon {
+  border-top: solid 3px #13a0b2;
+  border-bottom: solid 3px #13a0b2;
+}
+.company_excellance .single_excellance:hover .hexagon:before {
+  border-bottom: solid 3px #13a0b2;
+  border-right: solid 3px #13a0b2;
+}
+.company_excellance .single_excellance:hover .hexagon:after {
+  border-top: solid 3px #13a0b2;
+  border-left: solid 3px #13a0b2;
+}
+.about_testimonial .testimonial button:hover,.sidebar_categories ul li a:before,
+#related_project_slider .owl-nav [class*=owl-]:hover,#testimonial-sidebar .owl-dots .owl-dot span,.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus  {
+	border:1px solid #13a0b2;
+}
+#google-map-area .owl-theme .owl-nav [class*=owl-]:hover,.about_testimonial .testimonial .owl-theme .owl-nav [class*=owl-]:hover {
+  border:2px solid #13a0b2;
+}
+.page_list {
+  border-left:6px solid #13a0b2;
+}
+.about_us_main_content .our_mission .single_mission:hover .icon,.hephaistos.tparrows:hover,.hephaistos.tparrows:focus {
+   border:3px solid #13a0b2;
+}

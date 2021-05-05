@@ -1,0 +1,79 @@
+<div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="start">
+  <div class="mdk-drawer__content">
+    <div class="sidebar sidebar-light sidebar-left simplebar" data-simplebar>
+      <div class="d-flex align-items-center sidebar-p-a border-bottom">
+        <a href="#" class="flex d-flex align-items-center text-body text-underline-0">
+          <span class="avatar mr-3">
+            <img src="<%= image_path('stack/avatar/demi.png')%>" alt="avatar" class="avatar-img rounded-circle">
+          </span>
+          <span class="flex d-flex flex-column">
+            <strong>Bonjour</strong>
+            <small class="text-muted text-uppercase"><%=get_connected_user_info["prenom"]+" "+get_connected_user_info["nom"]%></small>
+          </span>
+        </a>
+        
+      </div>
+      <div class="sidebar-heading sidebar-m-t">Menu</div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item <% if current_page?(:controller => 'user', :action => 'index')%>active<% end%>">
+          <a class="sidebar-menu-button " href="<%=ENV['BASE_URL']%>/dashboard">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+            <span class="sidebar-menu-text">Tableau de bord</span>
+          </a>
+        </li>      
+        
+        <li class="sidebar-menu-item <% if current_page?(:controller => 'demande', :action => 'nouvelle_demande') || current_page?(:controller => 'demande', :action => 'mes_demandes')%>active open<% end%>">
+          <a class="sidebar-menu-button" data-toggle="collapse" href="#pages_menu">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">description</i>
+            <span class="sidebar-menu-text">Demandes</span>
+            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+          </a>
+          <ul class="sidebar-submenu collapse show"  id="pages_menu">
+            <li class="sidebar-menu-item <% if current_page?(:controller => 'demande', :action => 'nouvelle_demande')%>active<% end%>">
+              <a class="sidebar-menu-button" href="<%=ENV['BASE_URL']%>/nouvelle_demande">
+                <span class="sidebar-menu-text">Nouvelle demande</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item <% if current_page?(:controller => 'demande', :action => 'mes_demandes')%>active<% end%>">
+              <a class="sidebar-menu-button" href="<%=ENV['BASE_URL']%>/mes_demandes">
+                <span class="sidebar-menu-text">Mes demandes</span>
+              </a>
+            </li>
+          </ul>
+        
+        </li>
+
+
+
+        <li class="sidebar-menu-item <% if current_page?(stack_path(:edit_account)) || current_page?(:controller => 'facture', :action => 'mes_factures') || current_page?(:controller => 'facture', :action => 'detail_facture') %>active open<% end%>">
+          <a class="sidebar-menu-button" data-toggle="collapse" href="#profil_menu">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person</i>
+            <span class="sidebar-menu-text">Compte</span>
+            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+          </a>
+          <ul class="sidebar-submenu collapse" id="profil_menu">
+            <li class="sidebar-menu-item <% if current_page?(stack_path(:edit_account))%>active<% end%>">
+              <a class="sidebar-menu-button" href="<%= stack_path(:edit_account) %>">
+                <span class="sidebar-menu-text">Mon profil</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item <% if current_page?(:controller => 'facture', :action => 'mes_factures') || current_page?(:controller => 'facture', :action => 'detail_facture')%>active<%end%>">
+              <a class="sidebar-menu-button" href="<%=ENV['BASE_URL']%>/mes_factures">
+                <span class="sidebar-menu-text">Mes paiements</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="sidebar-menu-item">
+          <a class="sidebar-menu-button " href="<%=ENV['BASE_URL']%>/logout">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">exit_to_app</i>
+            <span class="sidebar-menu-text">Déconnexion</span>
+          </a>
+        </li>  
+      </ul>
+    
+    </div>
+</div>

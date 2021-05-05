@@ -1,0 +1,15 @@
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.6 -I /usr/lib/ruby/2.6.0 -r ./siteconf20210407-25594-1d2qk8p.rb extconf.rb
+creating Makefile
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20210407-25594-l8d8ke/skiptrace/internal

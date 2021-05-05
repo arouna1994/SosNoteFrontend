@@ -1,0 +1,15 @@
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/usr/bin/ruby2.6 -I /usr/lib/ruby/2.6.0 -r ./siteconf20210407-25594-18cacsv.rb extconf.rb
+creating Makefile
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20210407-25594-oamon3

@@ -1,0 +1,8 @@
+<label for="service">Service</label>
+<select id="service"  data-toggle="select" class="form-control form-control-sm">
+<%i=0%>
+<%@services.each do |service|%>
+    <option value="<%=i%>" <%if(@service.eql?(i))%>selected <%end%> ><%=service["prestation"]%></option>
+    <% i=i+1%>
+<%end%>
+</select>

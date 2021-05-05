@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>SOS Notes</title>
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/fav-icon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/fav-icon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/fav-icon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/fav-icon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/fav-icon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/fav-icon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/fav-icon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/fav-icon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/fav-icon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/fav-icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/fav-icon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/fav-icon/favicon-16x16.png">
+
+
+
+		<!-- Custom Css -->
+		<link rel="stylesheet" type="text/css" href="css/custom/style.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive/responsive.css">
+		<!-- Theme-Color css -->
+		<link rel="stylesheet" id="jssDefault" href="css/custom/color-2.css">
+
+
+		<!-- Fixing Internet Explorer ______________________________________-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/html5shiv.js"></script>
+		<![endif]-->
+
+
+	</head>
+	<body class="home">
+
+		<div class="page_wrapper">
+
+		<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        
+
+
+
+        <!-- Header ___________________________________ -->
+
+        <header class="p_color_bg">
+        	<div class="container">
+        		<div class="row">
+	        		<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 header_left">
+	        			<ul>
+	        				<li><i class="fa fa-map-marker s_color" aria-hidden="true"></i><a href="#">001 ligne 1, ligne 2 - adresse</a></li>
+	        				<li><i class="fa fa-phone s_color" aria-hidden="true"></i><a href="#">(221) 33 000 00 00 </a></li>
+	        				<li><i class="fa fa-clock-o s_color" aria-hidden="true"></i><a href="#"> Lun à Ven : 8.00 - 18.00</a></li>
+	        			</ul>
+	        		</div> <!-- End of .header_left -->
+	        		<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 header_right">
+	        			<ul class="social_icon">
+	        				<li><a href="#" class="tran3s" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+	        				<li><a href="#" class="tran3s" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	        				<li><a href="#" class="tran3s" title="Goolge-Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+	        			</ul>
+	        		</div> <!-- End of .header_right -->
+        		</div>  <!-- End of .row -->
+        	</div> <!-- End of .container -->
+        </header> <!-- End of header -->
+
+
+
+
+        <!-- Menu ___________________________________ -->
+
+        <div class="main_menu">
+        	<div class="container">
+        		<div class="logo float_left">
+        			<a href="<%=ENV['BASE_URL']%>"><img src="images/logo/logo_sos_note.png" alt="logo" class="img-responsive" width="100px"></a>
+        		</div> <!-- End of .logo -->
+
+        		<nav class="navbar navbar-default float_left">
+				   <!-- Collect the nav links, forms, and other content for toggling -->
+				   <div class="collapse navbar-collapse float_left" id="navbar-collapse-1">
+				     <ul class="nav navbar-nav">
+				       <li><a href="<%=ENV['BASE_URL']%>">Accueil</a></li>
+				       <li class="dropdown"><a href="#">Présentation</a>
+				       		<ul class="sub-menu">
+				       			<li><a href="<%=ENV['BASE_URL']%>/qui_sommes_nous">Qui sommes nous ?</a></li>
+                                   <li><a href="<%=ENV['BASE_URL']%>/pourquoi_nos_services">Pourquoi nos services ?</a></li>
+                                   <li><a href="<%=ENV['BASE_URL']%>/notre_fonctionnement">Notre fonctionnement</a></li>
+				       		</ul>
+				       </li>
+				       <li class="dropdown"><a href="#">Nos tarifs</a>
+				       		<ul class="sub-menu">
+				       			<li><a href="<%=ENV['BASE_URL']%>/documents_administratifs">Documents administratifs</a></li>
+				       			<li><a href="<%=ENV['BASE_URL']%>/documents_personnels">Documents personnels</a></li>
+				       		</ul>
+                       </li>
+                       <li <%if !is_connected %> class="hidden" <%end %>><a href="<%=ENV['BASE_URL']%>/dashboard">Mon compte</a></li>
+                       <li <%if is_connected %> class="hidden" <%end %>><a href="<%=ENV['BASE_URL']%>/login">Se connecter</a></li>
+                       <li <%if is_connected %> class="hidden" <%end %>><a href="<%=ENV['BASE_URL']%>/sign_up">Créer un compte</a></li>
+				     </ul>
+				   </div><!-- /.navbar-collapse -->
+				</nav>
+			<div class="clear_fix"></div>
+        	</div> <!-- End of .container -->
+        </div> <!-- End of .main_menu -->
+
+
+        <%= yield %>
+
+        
+
+   		<!-- Footer ____________________________ -->
+
+   		<footer>
+   			<div class="overlay">
+   				<div class="main_footer">
+   					<div class="container">
+   						<div class="row">
+   							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer_logo">
+							   <div class="theme_title">
+									<h4>SOS Notes</h4>
+								</div>
+   								<p>Sed laeditur hic coetuum magnificus splendor levitate paucorum incondita, ubi nati sunt non reputantium, sed tamquam indulta licentia vitiis ad errores lapsorum ac lasciviam. ut enim Simonides lyricus docet, beate perfecta ratione vieturo ante alia patriam esse convenit gloriosam.</p>
+   								<ul class="social_icon">
+			        				<li><a href="#" class="tran3s" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			        				<li><a href="#" class="tran3s" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			        				<li><a href="#" class="tran3s" title="Goolge-Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+			        				<li><a href="#" class="tran3s" title="Skype"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+			        			</ul>
+   							</div> <!-- End of .footer_logo -->
+
+   							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 quick_links">
+   								<div class="theme_title">
+									<h4>Liens utiles</h4>
+								</div>
+
+								<ul class="float_left">
+									<li><a href="index.html" class="tran3s">Home</a></li>
+									<li><a href="about.html" class="tran3s">About Us</a></li>
+									<li><a href="service.html" class="tran3s">Services</a></li>
+									<li><a href="#" class="tran3s">Testimonals</a></li>
+									<li><a href="#" class="tran3s">Pricing</a></li>
+									<li><a href="blog-default.html" class="tran3s">News</a></li>
+									<li><a href="shop.html" class="tran3s">Shop</a></li>
+									<li><a href="contact.html" class="tran3s">Contact us</a></li>
+								</ul>
+								<ul class="float_right border_fix">
+									<li><a href="#" class="tran3s">Human Resources</a></li>
+									<li><a href="business-planning.html" class="tran3s">Business Plans</a></li>
+									<li><a href="exit-succession.html" class="tran3s">Exit & Succession</a></li>
+									<li><a href="strategic-planning.html" class="tran3s">Strategic planning</a></li>
+									<li><a href="#" class="tran3s">Conflict Management</a></li>
+									<li><a href="#" class="tran3s">Market Research</a></li>
+									<li><a href="#" class="tran3s">Acquisitions</a></li>
+									<li><a href="#" class="tran3s">Governance</a></li>
+								</ul>
+								<div class="clear_fix"></div>
+   							</div> <!-- End of .quick_links -->
+
+
+   							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer_contact">
+   								<div class="theme_title">
+									<h4>Contacts</h4>
+								</div>
+								<p><span class="ficon flaticon-map"></span>30 rue Amadou Assane Ndoye, Dakar Senegal</p>
+								<p><span class="ficon flaticon-phone"></span> <a href="#">(+221) 33 000 00 00</a></p>
+								<p><span class="ficon flaticon-messagetwo"></span> <a href="#">contact@sosnote.com</a></p>
+								<p><span class="ficon flaticon-clock"></span> Lun - Ven   : 08:00 – 18:00 <br/> Sam   : 08:00 – 12:00</p>
+   							</div> <!-- End of .footer_contact -->
+   						</div> <!-- End of .row -->
+   					</div> <!-- End of .container -->
+   				</div> <!-- End of .main_footer -->
+
+   				<div class="bottom_footer">
+   					<div class="container">
+   						<p class="float_left font_fix">&copy; 2020 SOS Notes</p>
+   						<ul class="float_right">
+   							<li><a href="#" class="tran3s" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			        		<li><a href="#" class="tran3s" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			        		<li><a href="#" class="tran3s" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			        		<li><a href="#" class="tran3s" title="Goolge-Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+   						</ul>
+   						<div class="clear_fix"></div>
+   					</div>
+   				</div> <!-- End of .bottom_footer -->
+   			</div> <!-- End of .overlay -->
+   		</footer>
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top tran3s s_color_bg border_round">
+            <span class="ficon flaticon-up-arrow"></span>
+        </button>
+
+
+		<!-- Js File_________________________________ -->
+
+		<!-- j Query -->
+		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<!-- Bootstrap JS -->
+		<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- _________ vendor js __________ -->
+
+		<!-- Google map js -->
+		<script src="http://maps.google.com/maps/api/js"></script> <!-- Gmap Helper -->
+		<script src="js/gmap.js"></script>
+		<!-- revolution -->
+		<script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
+		<script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="vendor/revolution/revolution.extension.migration.min.js"></script>
+		<!-- Language Stitcher -->
+		<script type="text/javascript" src="vendor/language-switcher/jquery.polyglot.language.switcher.js"></script>
+		<!-- Fancybox js -->
+		<script type="text/javascript" src="vendor/fancy-box/jquery.fancybox.pack.js"></script>
+		<!-- ui js -->
+		<script type="text/javascript" src="vendor/jquery-ui/jquery-ui.min.js"></script>
+		<!-- owl.carousel -->
+		<script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
+		<!-- js count to -->
+		<script type="text/javascript" src="vendor/jquery.appear.js"></script>
+		<script type="text/javascript" src="vendor/jquery.countTo.js"></script>
+	
+
+		<!-- Theme js _________ -->
+		
+		<script type="text/javascript" src="js/theme.js"></script>
+		<script src="js/map-script.js"></script>
+
+		</div>  <!-- End of .page_wrapper -->
+
+	</body>
+</html>

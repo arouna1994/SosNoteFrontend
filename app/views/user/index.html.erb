@@ -1,0 +1,210 @@
+<%
+
+@chat = [{
+      avatar: "256_rsz_1andy-lee-642320-unsplash.jpg",
+      name: "Jenell D. Matney", 
+      date: "4 days ago"
+    }, {
+      avatar: "256_daniel-gaffey-1060698-unsplash.jpg",
+      name: "Sherri J. Cardenas", 
+      date: "3 days ago"
+    }, {
+      avatar: "256_jeremy-banks-798787-unsplash.jpg",
+      name: "Joseph S. Ferland", 
+      date: "2 days ago"
+    }, {
+      avatar: "256_joao-silas-636453-unsplash.jpg",
+      name: "Bryan K. Davis", 
+      date: "1 day ago"
+    }, {
+      avatar: "256_luke-porter-261779-unsplash.jpg",
+      name: "Elizabeth J. Ohara", 
+      date: "4 hours ago"
+    }, {
+      avatar: "256_michael-dam-258165-unsplash.jpg",
+      name: "Kaci M. Langston", 
+      date: "just now"
+    }]
+    
+%>
+<div class="container-fluid page__container">
+  <div class="page__heading d-flex align-items-center">
+    <div class="flex">
+      <h1 class="m-0">Tableau de bord</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page__container">
+  <div class="card-group">
+      <div class="card card-body text-center">
+        
+        <div class="d-flex flex-row align-items-center">
+          <div class="card-header__title m-0"> <i class="material-icons icon-muted icon-30pt">fiber_new</i> Nouvelle(s) demande(s)</div>
+          <div class="text-amount ml-auto"><%=get_connected_user_info["demande_new"]%></div>
+        </div>
+      </div>
+      <div class="card card-body text-center">
+        <div class="d-flex flex-row align-items-center">
+          <div class="card-header__title m-0"><i class="material-icons icon-muted icon-30pt">edit</i> Demande(s) en cours</div>
+          <div class="text-amount ml-auto"><%=get_connected_user_info["demande_en_cours"]%></div>
+        </div>
+      </div>
+      <div class="card card-body text-center">
+        <div class="d-flex flex-row align-items-center">
+          <div class="card-header__title m-0"><i class="material-icons  icon-muted icon-30pt">check</i> Demande(s) clôturée(s)</div>
+          <div class="text-amount ml-auto"><%=get_connected_user_info["demande_cloturee"]%></div>
+        </div>
+      </div>
+  </div>
+  
+
+  <div class="row">
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header card-header-large bg-white d-flex align-items-center">
+            <div class="flatpickr-wrapper flex">
+              <div>
+                <h4 class="card-header__title">Historiques</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-body py-0">
+            <div class="list-group list-group-small list-group-flush">
+              <% get_connected_user_info["historiques"].each do |historique| %>
+              <div class="list-group-item d-flex align-items-center px-0">
+                <div class="mr-3 flex"> <%=historique["libelle"] %></div>
+                <div class="mr-3 text-dark-gray"><%=historique["date_historique"]%></div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-header card-header-large bg-white d-flex align-items-center">
+            <div class="flatpickr-wrapper flex">
+              <div>
+                <h4 class="card-header__title">Mon activité sur les 7 derniers jours</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart" style="height: 295px;">
+              <canvas id="viewsChart">
+                <span style="font-size: 1rem;"><strong>Activités</strong> area chart goes here.</span>
+              </canvas>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-header card-header-large bg-white d-flex align-items-center">
+            <div class="flatpickr-wrapper flex">
+              <div>
+                <h4 class="card-header__title">Mes dernières demandes</h4>
+              </div>
+            </div>
+            <i class="material-icons icon-muted">help_outline</i>
+          </div>
+          <div class="card-body py-0">
+            <div class="list-group list-group-small list-group-flush">
+              <% (0..0).each do |i| %>
+              <div class="list-group-item d-flex align-items-center px-0">
+                <div class="mr-3 flex"> Curriculum vitae</div>
+                <div class="mr-3 text-dark-gray">05/12/2020</div>
+                <div><span class="badge badge-danger">NOUVELLE</span></div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+
+<% content_for :footer_scripts do %>
+<script>
+
+(function(){
+  'use strict';
+
+  Charts.init()
+
+  var Activites = function(id, type = 'line', options = {}) {
+    options = Chart.helpers.merge({
+      elements: {
+        line: {
+          fill: 'start',
+          backgroundColor: settings.charts.colors.area,
+          tension: 0,
+          borderWidth: 1
+        },
+        point: {
+          pointStyle: 'circle',
+          radius: 5,
+          hoverRadius: 5,
+          backgroundColor: settings.colors.white,
+          borderColor: settings.colors.primary[700],
+          borderWidth: 2
+        }
+      },
+      scales: {
+        xAxes: [{
+          gridLines: {
+            display: false
+          },
+          type: 'time',
+          time: {
+            unit: 'day'
+          }
+        }]
+      },
+      tooltips: {
+        callbacks: {
+          label: function(a, e) {
+            var t = e.datasets[a.datasetIndex].label || "",
+                o = a.yLabel,
+                r = "";
+            return 1 < e.datasets.length && (r += '<span class="popover-body-label mr-auto">' + t + "</span>"), r += '<span class="popover-body-value">' + o + " Activités</span>"
+          }
+        }
+      }
+    }, options)
+
+    var data = []
+    <%get_connected_user_info["activites"].each do |item|%>
+      data.push({
+        y: <%=item["nbre"]%>,
+        x: "<%=item["day"]%>"
+      })
+    <%end%>
+
+    var data = {
+      datasets: [{
+        label: "toutes les actions",
+        data
+      }]
+    }
+
+    Charts.create(id, type, options, data)
+  }
+
+  ///////////////////
+  // Create Charts //
+  ///////////////////
+  Activites('#viewsChart')
+
+})();
+
+</script>
+<% end %>

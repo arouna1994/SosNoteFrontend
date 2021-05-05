@@ -1,0 +1,65 @@
+<div class="card card-form">
+    <div class="row no-gutters">
+      <div class="col-lg-4 card-body">
+        <p><strong class="headings-color">Facture</strong></p>
+        <p class="text-muted">Veuillez renseigner les champs ci-contre pour une meilleure prise en charge de votre demande</p>
+      </div>
+      <div class="col-lg-8 card-form__body card-body">
+        <form>
+            <div class="form-group">
+                <label for="f_nom_commercial_emetrice">Nom commercial structure émétrice</label>
+                <input type="text" class="form-control" id="f_nom_commercial_emetrice" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="f_sigle_emetrice">Sigle structure émétrice</label>
+                <input type="text" class="form-control" id="f_sigle_emetrice" placeholder="">
+            </div>
+            <div 
+                class="dropzone dropzone-multiple w-100" 
+                data-toggle="dropzone" 
+                data-dropzone-multiple 
+                data-dropzone-url="http://"
+                data-dropzone-files='[]'>
+
+            </div>
+            <br/>
+            <div class="form-group">
+                <label for="f_contact_emetrice">Contacts structure émétrice</label>
+                <input type="text" class="form-control" id="f_contact_emetrice" placeholder="">
+            </div>
+            
+            <br/><br/>
+
+            <div class="form-group">
+                <label for="f_nom_destinataire">Nom commercial / Nom complet du destinataire</label>
+                <input type="text" class="form-control" id="f_nom_destinataire" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="f_contact_destinataire">Contacts du destinataire</label>
+                <input type="text" class="form-control" id="f_contact_destinataire" placeholder="">
+            </div>
+
+            <label>Liste des services/produits (nom, Prix unitaire, quantité)</label>
+            <div style="height: 200px;" data-toggle="quill" data-quill-placeholder="Liste des produits / services et leur coût">
+            
+            </div>  
+
+            <div class="form-group col-lg-6">
+                <label for="rf_emise">Remise</label>
+                <input type="text" class="form-control" id="f_remise" placeholder="10% par exemple" >
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="f_tva">TVA applicable</label>
+                <input type="text" class="form-control" id="f_tva" placeholder="20% par exemple" >
+            </div>
+
+            <div class="form-group">
+                <label for="f_mentions">Mentions particulières</label>
+                <input type="text" class="form-control" id="f_mentions" placeholder="" >
+            </div>
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+<div class="card card-form">
+    <div class="row no-gutters">
+      <div class="col-lg-4 card-body">
+        <p><strong class="headings-color">Lettre de motivation entreprise </strong></p>
+        <p class="text-muted">Veuillez renseigner les champs ci-contre pour une meilleure prise en charge de votre demande</p>
+      </div>
+      <div class="col-lg-8 card-form__body card-body">
+        <form>
+            <label for="cv">Votre CV</label>
+            <div 
+                id="cv"
+                class="dropzone dropzone-multiple w-100" 
+                data-toggle="dropzone" 
+                data-dropzone-multiple 
+                data-dropzone-url="http://"
+                data-dropzone-files='[]'>
+
+            </div>
+            <br/>
+            <div class="form-group">
+                <label for="structure">Structure ciblée (Etablissement de formation)</label>
+                <input type="text" class="form-control" id="structure" placeholder="">
+            </div>
+            <label for="offre">Offre d'emploi / stage</label>
+            <div 
+                id="offre"
+                class="dropzone dropzone-multiple w-100" 
+                data-toggle="dropzone" 
+                data-dropzone-multiple 
+                data-dropzone-url="http://"
+                data-dropzone-files='[]'>
+
+            </div>
+            <br/>
+            <div class="form-group">
+                <label for="lien">ou le lien vers l'offre</label>
+                <input type="text" class="form-control" id="lien" placeholder="">
+            </div>
+            <label>Projets professionnels</label>
+            <div style="height: 200px;" data-toggle="quill" data-quill-placeholder="vos projets professionnels">
+            
+            </div>
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
+      </div>
+    </div>
+  </div>

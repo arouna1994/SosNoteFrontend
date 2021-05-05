@@ -1,0 +1,19 @@
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+/usr/bin/ruby2.6 -I /usr/lib/ruby/2.6.0 -r ./siteconf20210407-25594-wc4ugu.rb extconf.rb
+creating Makefile
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘bs_cache_path’:
+bootsnap.c:277:24: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+   sprintf(*cache_path, "%s/%02x/%014llx", cachedir, first_byte, remainder);
+                        ^
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/arouna/stage/sosNote/SosNotesFrontend/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210407-25594-1yst4nf/bootsnap

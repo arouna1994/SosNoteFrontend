@@ -1,0 +1,50 @@
+<div class="container-fluid page__container">
+  <div class="page__heading d-flex align-items-center">
+    <div class="flex">
+      <h1 class="m-0">Nouvelle demande</h1>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid page__container">
+    <div class="card card-form">
+    <div class="row no-gutters">
+      <div class="col-lg-4 card-body">
+        <p><strong class="headings-color">Prestations</strong></p>
+        <p class="text-muted">Veuilez choisir le type de document et le type de service que vous souhaitez.</p>
+      </div>
+      <div class="col-lg-8 card-form__body card-body">
+        <label for="type_document">Type document</label>
+        <select id="type_document"  data-toggle="select" class="form-control form-control-sm">
+          <%i=0%>
+          <% @type_documents["items"].each do |type_doc| %>
+            <option value="<%=i%>" <%if(@doc.eql?(i))%>selected <%end%> ><%=type_doc["libelle"]%></option>
+            <% i=i+1%>
+          <%end%>
+        </select>
+        <br/><br/>
+        <%= render "new_dmd_service" %>
+      </div>
+    </div>
+    </div>
+
+
+    <%= render @page %>
+</div>
+
+
+
+
+
+<script>
+  var type_document = document.getElementById("type_document");
+  var service = document.getElementById("service");
+  type_document.onchange = function(ev){
+    document.location.href = "<%=ENV['BASE_URL']%>/nouvelle_demande?type_doc="+ev.target.selectedIndex;
+  }
+  service.onchange = function(ev){
+    document.location.href = "<%=ENV['BASE_URL']%>/nouvelle_demande?type_doc=<%=@doc%>&service="+ev.target.selectedIndex;
+  }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>SOS Notes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag "application.js", "data-turbolinks-track" => true  %>
+  </head>
+
+
+
+  <body class="<%= @body_class || 'layout-default' %>">
+    <div class="mdk-header-layout js-mdk-header-layout">
+
+      <!-- Header Layout Content -->
+      <div class="mdk-header-layout__content">
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+          <div class="mdk-drawer-layout__content page">
+            <%# CONTENT  %>
+            <%= yield %>
+          </div>
+      </div>
+
+    </div>
+    <%= content_for :footer %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <%= content_for :footer_scripts %>
+  </body>
+</html>
+
+<%= render 'layouts/stack/footer'%>
+
+

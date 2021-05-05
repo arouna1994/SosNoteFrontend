@@ -1,0 +1,76 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading d-flex align-items-center d-print-none">
+    <div class="flex">  
+    <h1 class="m-0">Factures</h1>
+    </div>
+    <a href="#" class="btn btn-primary"><i class="material-icons">file_download</i> Télécharger</a>
+  </div>
+</div>
+
+<div class="container-fluid page__container">
+  
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+            <div class="badge badge-success">PAYEE</div>
+          
+          <div class="px-3">
+            <div class="d-flex justify-content-center flex-column text-center my-5 navbar-light">
+              <a href="<%= stack_path(:index) %>" class="navbar-brand d-flex flex-column m-0" style="min-width: 0">
+                <img class="navbar-brand-icon mb-2" src="<%= image_path('stack/stack-logo-blue.svg')%>" width="25" alt="Stack">
+                <span>FACTURE</span>
+              </a>
+              <div class="text-muted">00000000001</div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-lg">
+                <div class="text-label">De</div>
+                <p class="mb-4">
+                  <strong class="text-body">SOS Notes</strong><br>
+                  X rue Y<br>
+                  Dakar, Senegal<br>
+                </p>
+                <div class="text-label">Numéro Facture</div>
+                00000000001
+              </div>
+              <div class="col-lg text-right">
+                <div class="text-label">A (Client)</div>
+                <p class="mb-4">
+                  <strong class="text-body">Brice ALLAGBE</strong><br>
+                  Villa 8696<br>
+                  Sacré coeur, Dakar<br>
+                </p>
+                <div class="text-label">Date Paiement</div>
+                20 Nov 2020
+              </div>
+            </div>
+    
+            <div class="table-responsive">
+              <table class="table border-bottom mb-5">
+                <thead>
+                  <tr class="bg-light">
+                    <th>Désignation</th>
+                    <th class="text-right">Montant</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rédaction Curriculum Vitae</td>
+                    <td class="text-right">5000 XOF</td>
+                  </tr>
+                  <tr >
+                    <td><strong>Total</strong></td>
+                    <td colspan="2" class="text-right"><strong>5000 XOF</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
